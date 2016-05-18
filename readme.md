@@ -1,5 +1,6 @@
 # System Requirement
 These are requirements of Laravel 5.2:
+
 1. PHP >= 5.5.9
 2. OpenSSL PHP Extension
 3. PDO PHP Extension
