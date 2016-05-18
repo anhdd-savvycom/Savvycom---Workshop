@@ -1,0 +1,70 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$footerHeight: 50px;
+
+$darkBg: #2a2d32;
+$savvycomGreen: #a5ce3a;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius !important;
+       -moz-border-radius: $radius !important;
+        -ms-border-radius: $radius !important;
+            border-radius: $radius !important;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -$footerHeight;
+
+    &:after {
+        content: "";
+        display: block;
+    }
+}
+
+#footer, .page-wrap:after {
+    height: $footerHeight;
+    line-height: $footerHeight;
+    text-align: center;
+}
+
+#footer {
+    background: $darkBg;
+    border-top: 2px solid $savvycomGreen;
+    color: #fff;
+}
+
+.table-blogs {
+    td {
+        vertical-align: middle !important;
+    }
+
+    margin-top: 20px;
+}
+
+.panel-blog {
+    .time {
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 300;
+        margin-top: 5px;
+    }
+
+    .description {
+        font-weight: 700;
+    }
+}
+
+// Using Mixin
+.btn {
+    @include border-radius(0px);
+}
